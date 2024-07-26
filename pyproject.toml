@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "signature"
+version = "0.1.0"
+description = ""
+authors = ["Ren Kasiyas <okasiyas@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+turtle = "0.0.1"
+tk = {url = "https://files.pythonhosted.org/packages/a0/81/742b342fd642e672fbedecde725ba44db44e800dc4c936216c3c6729885a/tk-0.1.0.tar.gz"}
+pyautogui = "^0.9.54"
+pillow = "^10.4.0"
+pytest = "^8.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
