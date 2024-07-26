@@ -12,7 +12,15 @@ tk = {url = "https://files.pythonhosted.org/packages/a0/81/742b342fd642e672fbede
 pyautogui = "^0.9.54"
 pillow = "^10.4.0"
 pytest = "^8.3.2"
+pre-commit = "^3.7.1"
 
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::UserWarning",
+]
+testpaths = [
+    "tests"
+]
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 22.10.0
+    hooks:
+      - id: black
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: ["--profile=black"]
+  - repo: local
+    hooks:
+      # - id: export-requirements-txt
+      #   name: export-requirements-txt
+      #   entry: ./export-requirements.sh
+      #   language: system
+      - id: pytest
+        name: pytest
+        entry: poetry run python -m pytest
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
